@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  text-align: center;
+}
+
+.header {
+  font-size: 4rem; /* Size of the header text */
+  color: var(--text-color);
+  margin-bottom: 40px;
+  text-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.7), inset -1px -1px 2px rgba(0, 0, 0, 0.15);
+  transition: color 0.3s ease;
+}
+
+.theme-toggle {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border-color: var(--text-color);
+  border-radius: 30px;
+  box-shadow: 5px 5px 15px var(--button-shadow-dark), -5px -5px 15px var(--button-shadow-dark);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clock {
+  font-size: 9rem;
+  font-weight: 900;
+  color: var(--text-color);
+  text-shadow: var(--button-shadow-dark);
+  text-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.7), inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+  padding: 60px 80px; /* Increased padding */
+  border-radius: 20px;
+  background-color: var(--background-color);
+  box-shadow: 20px 20px 60px var(--shadow-dark), -20px -20px 60px var(--shadow-light);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light Theme Variables */
+:root {
+  --background-color: #e0e5ec;
+  --text-color: #333;
+  --shadow-dark: #bebebe;
+  --shadow-light: #ffffff;
+  --button-background-color: #e0e5ec;
+  --button-text-color: #333;
+  --button-shadow-dark: #bebebe;
+  --button-shadow-light: #ffffff;
+}
+
+/* Dark Theme Variables */
+body.dark-mode {
+  --background-color: #2b2b2b;
+  --text-color: #ff6a00;
+  --shadow-dark: #1a1a1a;
+  --shadow-light: #3d3d3d;
+  --button-background-color: #3d3d3d;
+  --button-text-color: #ff6a00;
+  --button-shadow-dark: #1a1a1a;
+  --button-shadow-light: #4f4f4f;
+}
